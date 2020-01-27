@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>X-mas party</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+</head>
+<body class="card">
+<div class="dialog">
+    <div class="dialog-in">
+        <div class="dialog-msg">
+            <div class="heading">You've got a post card!</div>
+            <a class="play" onclick="openCard()">View</a>
+        </div>
+    </div>
+
+</div>
+    <div class="header">
+    <div class="heading">Merry Christmas!</div>
+    </div>
+    <div class="deer">
+        <img class="deer-body" src="img/deer-body.png" alt="">
+        <img class="deer-left-hand" src="img/deer-left-hand.png" alt="">
+        <img class="deer-gift3" src="img/deer-gift3.png" alt="">
+        <img class="deer-gift2" src="img/deer-gift2.png" alt="">
+        <img class="deer-gift1" src="img/deer-gift1.png" alt="">
+        <img class="deer-scarf" src="img/deer-scarf.png" alt="">
+        <img class="deer-right-hand" src="img/deer-right-hand.png" alt="" >
+        <img class="deer-left-leg" src="img/deer-left-leg.png" alt="">
+        <img class="deer-right-leg" src="img/deer-right-leg.png" alt="">
+    </div>
+    <div class="penguin">
+        <div class="peng-left-hand">     
+            <img class="peng-letter" src="img/peng-letter.png" alt="">
+            <img class="peng-left-hand-pic" src="img/peng-left-hand.png" alt="">
+        </div>
+        <img class="peng-right-hand" src="img/peng-right-hand.png" alt="">
+        <img class="peng-body" src="img/peng-body.png" alt="">
+    </div>
+    <div class="santa">
+        <img class="santa-body" src="img/santa-body.png" alt="">
+        <img class="santa-left-hand" src="img/santa-left-hand.png" alt="">
+        <img class="santa-right-hand" src="img/santa-right-hand.png" alt="">
+        <div class="santa-baloon">
+            <img class="baloon" src="img/santa-baloon.png" alt="">
+            <div class="santa-text"></div>
+       </div> 
+        <img class="santa-left-leg" src="img/santa-left-leg.png" alt="">
+        <img class="santa-right-leg" src="img/santa-right-leg.png" alt="">
+    </div>
+    <div class="dwarf">
+        <img class="dwarf-body" src="img/dwarf-body.png" alt="">
+        <img class="dwarf-left-leg" src="img/dwarf-left-leg.png" alt="">
+        <img class="dwarf-right-leg" src="img/dwarf-right-leg.png" alt="">
+        <img class="dwarf-box" src="img/dwarf-box.png" alt="">
+    </div>
+
+
+    <audio src="mp3/music.mp3" class="music" autoplay loop></audio>
+    <canvas id="canvas"></canvas>
+ 
+<script src="js/fireworks.js"></script>
+
+<script>
+function openCard(){
+    document.querySelector('.dialog').style.display = 'none';
+    document.querySelector('.music').play();
+    fireworks();
+    document.querySelector('body').classList.add('active');
+}
+</script>
+
+</body>
+</html>

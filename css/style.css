@@ -1,0 +1,623 @@
+:root {
+    --size: 200px;
+    --size-md: 150px;
+    --size-sm: 120px;
+  }
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+body,html{
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    background-image: url('../img/bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-color: rgb(167, 232, 243);
+    margin: 0;
+    text-align: center;
+    font-family: 'Playfair Display SC', serif;
+}
+
+.dialog{
+ display: table;
+position: absolute;
+background-color: rgba(0,0,0,0.9);
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: 100;
+}
+
+.dialog-in{
+display: table-cell;
+vertical-align: middle;
+}
+
+.heading{
+color:  rgb(245, 32, 103);
+font-size: 50px;
+margin: 50px 0;
+}
+
+.play{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgb(245, 32, 103);
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.deer{
+    position: absolute;
+    width: var(--size);
+    bottom: 30%;
+    left: 50%;
+    margin-left: 5%;
+}
+.active .deer{
+    animation: deer-body 4s ease-in-out infinite;
+
+}
+
+@keyframes deer-body{
+    0%{
+        bottom: -40%;
+    }
+    50%{
+        bottom: 40%;
+        transform: rotate(-20deg);
+    }
+    100%{
+        bottom: -40%;
+    }
+}
+
+.deer-body{
+    position: relative;
+    z-index: 1;
+}
+
+.deer-left-hand{
+    position: absolute;
+    width: 30%;
+    top: 59%;
+    left: -15%;
+    transform-origin: 100% 80%;
+}
+@keyframes deer-lh{
+    0%{
+        transform: rotate(-20deg);
+    }
+    30%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
+
+
+.active .deer-left-hand{
+    animation: deer-lh 4s ease-in-out infinite; 
+}
+
+.deer-gift3{
+    position: absolute;
+    width: 50%;
+    top: 25%;
+    left: -31%;
+}
+
+.active .deer-gift3{
+    animation: deer-gift3 4s ease-in-out infinite; 
+}
+
+@keyframes deer-gift3{
+    0%{
+        top: 35%;
+    }
+    30%{
+        top: 35%;
+    }
+    50%{
+        top: 15%;
+    }
+    60%{
+        top: 20%;
+    }
+    100%{
+        top: 20%;
+    }
+}
+
+.deer-gift2{
+    position: absolute;
+    width: 50%;
+    top: 0%;
+    left: -15%;
+}
+
+.active .deer-gift2{
+    animation: deer-gift2 4s ease-in-out infinite;
+}
+
+@keyframes deer-gift2{
+    0%{
+        top: 10%;
+    }
+    30%{
+        top: 10%;
+    }
+    50%{
+        top: -10%;
+    }
+    75%{
+        top: -5%;
+    }
+    100%{
+        top: -5%;
+    }
+}
+
+.deer-gift1{
+    position: absolute;
+    width: 50%;
+    top: -25%;
+    left: 4%;
+}
+
+.active .deer-gift1{
+    animation: deer-gift1 4s ease-in-out infinite;
+}
+
+@keyframes deer-gift1{
+    0%{
+        top: -15%;
+    }
+    30%{
+        top: -15%;
+    }
+    50%{
+        top: -35%;
+    }
+    65%{
+        top: -35%;
+    }
+    85%{
+        top: -30%;
+    }
+    100%{
+        top: -30%;
+    }
+}
+
+
+.deer-scarf{
+    position: absolute;
+    width: 20%;
+    top: 72%;
+    right: 41%;
+}
+
+.deer-right-hand{
+    position: absolute;
+    width: 30%;
+    top: 75%;
+    left: 39%;
+    transform-origin: 0 100%;
+}
+
+.active .deer-right-hand{
+    animation: deer-rh 4s ease-in-out infinite;
+}
+
+@keyframes deer-rh{
+    0%{
+        transform: rotate(40deg);
+    }
+    30%{
+        transform: rotate(40deg);
+    }
+    50%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(-20deg);
+    }
+}
+
+.deer-left-leg{
+    position: absolute;
+    width: 35%;
+    top: 83%;
+    left: -22%;
+    transform-origin: 100% 0;
+}
+
+.active .deer-left-leg{
+    animation: deer-ll 4s ease-in-out infinite;
+}
+@keyframes deer-ll{
+    0%{
+        transform: rotate(-20deg);
+    }
+    30%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.deer-right-leg{
+    position: absolute;
+    width: 22%;
+    top: 85%;
+    left: 18%;
+    transform-origin: 0 0;
+}
+
+.active .deer-right-leg{
+    animation: deer-rl 4s ease-in-out infinite;
+}
+
+@keyframes deer-rl{
+    0%{
+        transform: rotate(-20deg);
+    }
+    30%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+.penguin{
+    position: absolute;
+    width: 180px;
+    left: 75%;
+    bottom: 20%;    
+}
+
+
+.active .penguin {
+    animation: penguin-body 4s ease-in-out infinite;
+    /* animation-delay: 2s; */
+}
+
+@keyframes penguin-body{
+    0%{
+        bottom: -40%;
+    }
+    50%{
+        bottom: 20%;
+        transform: rotate(-40deg);
+    }
+    100%{
+        bottom: -40%;
+    }
+}
+
+.peng-body{
+    position: relative;
+}
+
+.peng-left-hand-pic{
+    position: relative;
+}
+.peng-left-hand{
+    position: absolute;
+    width: 30%;
+    top: 12%;
+    left: 0;
+    transform-origin: 100% 100%;
+}
+
+.active .peng-left-hand{
+    animation: peng-lh 4s ease-in-out infinite;
+}
+
+@keyframes peng-lh{
+    30%{
+        transform: rotate(30deg);
+    }
+    35%{
+        transform: rotate(-30deg);
+    }
+    40%{
+        transform: rotate(30deg);
+    }
+    45%{
+        transform: rotate(-30deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    55%{
+        transform: rotate(-30deg);
+    }
+    60%{
+        transform: rotate(30deg);
+    }
+}
+
+.peng-letter{
+    position: absolute;
+    width: 100%;
+    bottom: 70%;
+    right: 10%;
+}
+
+.peng-right-hand{
+    position: absolute;
+    width: 30%;
+    top: 62%;
+    left: 82%;
+}
+
+.santa{
+    position: absolute;
+    width: var(--size);
+    bottom: 30%;
+    right: 50%;
+    margin-right: 5%;
+    transform-origin: 120% 0;
+    transform: rotate(-10deg);
+}
+
+.active .santa{
+    animation: santa-body 4s linear infinite, santa-body-swing 2s linear infinite;
+}
+
+@keyframes santa-body-swing{
+    50%{
+        transform: rotate(-30deg);
+    }
+}
+@keyframes santa-body{
+    25%{
+        bottom: 20%;
+    }
+    50%{
+        right: 60%;
+        bottom: 25%;
+    }
+    75%{
+        bottom: 30%;
+        right: 55%;
+        
+    }
+}
+
+.santa-body{
+    position: relative;
+    z-index: 1;
+}
+.santa-left-hand{
+    position: absolute;
+    width: 30%;
+    top: 70%;
+    left: 24px;
+    transform-origin: 100% 0;
+}
+.active .santa-left-hand{
+    animation: santa-lh 2s ease-in-out infinite;
+}
+
+@keyframes santa-lh{
+    50%{
+        transform: rotate(40deg);
+    }
+}
+
+.santa-baloon{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    top: -60%;
+    left: 89%;
+    
+}
+
+.santa-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 30px;
+}
+            
+.santa-right-hand{
+    position: absolute;
+    width: 30%;
+    top: 37%;
+    left: 83%;
+}
+
+.santa-left-leg{
+    position: absolute;
+    width: 22%;
+    top: 94%;
+    left: 37%;
+}
+
+.santa-right-leg{
+    position: absolute;
+    width: 30%;
+    top: 86%;
+    left: 89%;
+    transform-origin: 0 0;
+}
+
+.active .santa-right-leg{
+    animation: santa-rl 0.5s ease-in-out infinite;
+}
+
+@keyframes santa-rl{
+50%{
+    transform: rotate(20deg);
+}
+}
+
+.dwarf{
+    position: absolute;
+    width: var(--size);
+    bottom: 30%;
+    right: 75%;
+    margin-right: 5%;
+}
+
+.active .dwarf{
+    animation: dwarf-body 4s ease-in-out infinite;
+}
+
+@keyframes dwarf-body{
+    0%{
+        bottom: -50%;
+       
+    }
+    50%{
+        bottom: 30%;
+        transform: rotate(40deg);
+    }
+    100%{
+        bottom: -50%;
+    }
+}
+
+.dwarf-body{
+    position: relative;
+    z-index: 1;
+}
+
+.dwarf-left-leg{
+    position: absolute;
+    top: 94%;
+    right: 18%;
+    width: 10%;
+    transform-origin: 0 0;
+}
+
+.active .dwarf-left-leg{
+    animation: dwarf-ll 4s ease-in-out infinite;
+}
+
+@keyframes dwarf-ll{
+    30%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(-40deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    60%{
+        transform: rotate(-40deg);
+    }
+    70%{
+        transform: rotate(0deg);
+    }
+}
+
+.dwarf-right-leg{
+    position: absolute;
+    top: 85%;
+    right: -1%;
+    width: 10%;
+    transform: rotate(-55deg);
+    transform-origin: 0 0;
+}
+
+.active .dwarf-right-leg{
+    animation: dwarf-rl 4s ease-in-out infinite;
+}
+
+@keyframes dwarf-rl{
+    30%{
+        transform: rotate(-55deg);
+    }
+    40%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(-55deg);
+    }
+    60%{
+        transform: rotate(-5deg);
+    }
+    70%{
+        transform: rotate(-55deg);
+    }
+}
+
+.dwarf-box{
+    position: absolute;
+    bottom: 66%;
+    right: 40%;
+    z-index: 2;
+}
+
+.active .dwarf-box{
+    animation: dwarf-box 4s ease-in-out infinite;
+}
+
+@keyframes dwarf-box{
+    45%{
+        bottom: 66%;
+        right: 40%;
+    }
+    50%{
+        bottom: 72%;
+        right: 47%;
+    }
+    60%{
+        bottom: 66%;
+        right: 40%;
+    }
+
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 900px){
+    .deer,.santa,.dwarf {
+        width: var(--size-md);
+    }
+
+    .penguin{
+        width: 130px;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .deer,.santa,.dwarf {
+        width: var(--size-sm);
+    }
+
+    .penguin{
+        width: 100px;
+    }
+}
